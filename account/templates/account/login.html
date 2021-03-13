@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Login Page {% endblock %}
+
+{% block content %}
+
+<div class="center-column">
+
+    <form action='' method='POST'>
+        {% csrf_token %}
+        {{form}}
+        {% if request.GET.next %}
+            <input type='hidden' name='next' value='{{request.GET.next}}'>
+        {% endif %}
+        <input name="Login" id="Login" class="btn btn-primary" type="submit" value="Login">
+    </form>
+
+</div>
+
+{% endblock content %}
+
+

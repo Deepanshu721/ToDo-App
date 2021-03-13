@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Signup Page {% endblock title %}
+
+{% block content %}
+
+<div class="center-column">
+
+    <form action='' method='POST'>
+        {% csrf_token %}
+        {{form}}
+        <input name="Signup" id="Signup" class="btn btn-primary" type="submit" value="Signup">
+    </form>
+
+</div>
+
+{% endblock content %}
